@@ -10,12 +10,10 @@ import Flutter
     ) -> Bool {
         let controller : FlutterViewController = window?.rootViewController as! FlutterViewController
         // Set up the FlutterMethodChannel name - it must match
-        // the MethodChannel names used in main.dart
-
-        // This is for part 1 mentioned in my LinkedIn article
+        // the MethodChannel names used in lib/platformdata.dart
         let platformChannel = FlutterMethodChannel(name: "au.com.mydomain.platformtutorialpart3/platforminfo",
                                                     binaryMessenger: controller.binaryMessenger)
-        // This sets up the call handler to allow us to call "getBatteryLevel".
+        // This sets up the call handler to allow us to call "getBatteryLevel" or "getComputationResult".
         platformChannel.setMethodCallHandler({
             [weak self] (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
             // This method is invoked on the UI thread.
