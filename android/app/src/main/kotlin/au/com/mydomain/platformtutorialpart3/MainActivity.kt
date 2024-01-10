@@ -16,7 +16,7 @@ import kotlin.math.abs
 
 class MainActivity: FlutterActivity() {
     // MethodChannel names - make sure that it matches the name
-    // in main.dart
+    // in lib/platformdata.dart
      private val PLATFORM_CHANNEL_NAME = "au.com.mydomain.platformtutorialpart3/platforminfo"
 
     // Set up the platform method call handler
