@@ -23,8 +23,7 @@ class MainActivity: FlutterActivity() {
     // Set up the platform method call handler
     // to allow us to call the platform method
     // "getBatteryLevel" and "getComputationResult"
-    // This is for part 1 mentioned in my LinkedIn article
-    override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
+     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
 
         // Set up platform method call handler.
@@ -69,8 +68,7 @@ class MainActivity: FlutterActivity() {
     // level value as an integer.
     // We have different calls depending
     // on the platform Android versions
-    // we are on. This is for part 1
-    // mentioned in my LinkedIn article.
+    // we are on.
     private fun getBatteryLevel(): Int {
         val batteryLevel: Int
         // Material Design was first implemented in Android 5.0 API level 21
@@ -96,7 +94,6 @@ class MainActivity: FlutterActivity() {
     // Return 0 on any error. Usually error conditions are
     // signified by returning -1 but here we are returning 0
     // on error for simplicity.
-    // This is for part 2 mentioned in my LinkedIn article
     private fun getComputationResult(x: Int, y: Int): Int {
         var compResult: Int = 0  // Init - assume failure.
         try {
